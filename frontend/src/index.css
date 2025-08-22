@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans text-secondary-900 bg-gradient-to-br from-secondary-50 to-primary-50;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  * {
+    @apply border-secondary-200;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary-600 to-primary-700 text-white px-6 py-3 rounded-xl font-semibold hover:from-primary-700 hover:to-primary-800 transition-all duration-300 shadow-soft hover:shadow-medium transform hover:-translate-y-0.5;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-secondary-700 border border-secondary-300 px-6 py-3 rounded-xl font-semibold hover:bg-secondary-50 hover:border-secondary-400 transition-all duration-300 shadow-soft hover:shadow-medium;
+  }
+  
+  .btn-success {
+    @apply bg-gradient-to-r from-success-500 to-success-600 text-white px-6 py-3 rounded-xl font-semibold hover:from-success-600 hover:to-success-700 transition-all duration-300 shadow-soft hover:shadow-medium;
+  }
+  
+  .btn-warning {
+    @apply bg-gradient-to-r from-warning-500 to-warning-600 text-white px-6 py-3 rounded-xl font-semibold hover:from-warning-600 hover:to-warning-700 transition-all duration-300 shadow-soft hover:shadow-medium;
+  }
+  
+  .btn-error {
+    @apply bg-gradient-to-r from-error-500 to-error-600 text-white px-6 py-3 rounded-xl font-semibold hover:from-error-600 hover:to-error-700 transition-all duration-300 shadow-soft hover:shadow-medium;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 border border-secondary-300 rounded-xl bg-white text-secondary-900 placeholder-secondary-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-200;
+  }
+  
+  .input-field:focus {
+    @apply shadow-medium;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-soft p-8 border border-secondary-100 backdrop-blur-sm;
+  }
+  
+  .card-elevated {
+    @apply bg-white rounded-2xl shadow-medium p-8 border border-secondary-100 backdrop-blur-sm;
+  }
+  
+  .card-hover {
+    @apply bg-white rounded-2xl shadow-soft hover:shadow-medium p-6 border border-secondary-100 transition-all duration-300 hover:-translate-y-1;
+  }
+  
+  .gradient-bg {
+    @apply bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent;
+  }
+}

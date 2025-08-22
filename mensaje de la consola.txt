@@ -1,0 +1,57 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.0)
+
+2025-08-21T13:43:31.452-04:00  INFO 2380 --- [sistema-reservas] [  restartedMain] c.reservas.SistemaReservasApplication    : Starting SistemaReservasApplication using Java 22.0.2 with PID 2380 (D:\Respaldoformateo\htdocs\Reservas\backend\target\classes started by Matias in D:\Respaldoformateo\htdocs\Reservas)
+2025-08-21T13:43:31.468-04:00  INFO 2380 --- [sistema-reservas] [  restartedMain] c.reservas.SistemaReservasApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-08-21T13:43:31.520-04:00  INFO 2380 --- [sistema-reservas] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-21T13:43:31.520-04:00  INFO 2380 --- [sistema-reservas] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-21T13:43:32.337-04:00  INFO 2380 --- [sistema-reservas] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-21T13:43:32.393-04:00  INFO 2380 --- [sistema-reservas] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 3 JPA repository interfaces.
+2025-08-21T13:43:33.130-04:00  INFO 2380 --- [sistema-reservas] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-21T13:43:33.151-04:00  INFO 2380 --- [sistema-reservas] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-21T13:43:33.151-04:00  INFO 2380 --- [sistema-reservas] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-08-21T13:43:33.193-04:00  INFO 2380 --- [sistema-reservas] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-21T13:43:33.193-04:00  INFO 2380 --- [sistema-reservas] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1673 ms
+2025-08-21T13:43:33.449-04:00  INFO 2380 --- [sistema-reservas] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-21T13:43:33.508-04:00  INFO 2380 --- [sistema-reservas] [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-08-21T13:43:33.548-04:00  INFO 2380 --- [sistema-reservas] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-21T13:43:33.745-04:00  INFO 2380 --- [sistema-reservas] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-21T13:43:33.772-04:00  INFO 2380 --- [sistema-reservas] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-21T13:43:33.979-04:00  INFO 2380 --- [sistema-reservas] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@14d60479
+2025-08-21T13:43:33.979-04:00  INFO 2380 --- [sistema-reservas] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-21T13:43:34.034-04:00  WARN 2380 --- [sistema-reservas] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-21T13:43:34.768-04:00  INFO 2380 --- [sistema-reservas] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    alter table if exists reservas 
+       alter column id_reserva set data type bigint
+Hibernate: 
+    alter table if exists reservas 
+       alter column id_servicio set data type bigint
+Hibernate: 
+    alter table if exists reservas 
+       alter column id_usuario set data type bigint
+Hibernate: 
+    alter table if exists servicios 
+       alter column id_servicio set data type bigint
+Hibernate: 
+    alter table if exists usuarios 
+       alter column id_usuario set data type bigint
+2025-08-21T13:43:34.863-04:00  INFO 2380 --- [sistema-reservas] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-21T13:43:35.156-04:00  INFO 2380 --- [sistema-reservas] [  restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-21T13:43:35.991-04:00  WARN 2380 --- [sistema-reservas] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-21T13:43:36.038-04:00  WARN 2380 --- [sistema-reservas] [  restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: ccf045bc-cbf1-4ee1-a586-855816a87bcb
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-08-21T13:43:36.463-04:00  INFO 2380 --- [sistema-reservas] [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@266cf1af, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7a80b144, org.springframework.security.web.context.SecurityContextHolderFilter@290b4396, org.springframework.security.web.header.HeaderWriterFilter@11100c3e, org.springframework.web.filter.CorsFilter@3af9a05c, org.springframework.security.web.authentication.logout.LogoutFilter@4fa6c1b1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4823498d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@678d4880, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2246c3a, org.springframework.security.web.session.SessionManagementFilter@75325d5f, org.springframework.security.web.access.ExceptionTranslationFilter@2d76818f, org.springframework.security.web.access.intercept.AuthorizationFilter@4f927442]
+2025-08-21T13:43:36.808-04:00  INFO 2380 --- [sistema-reservas] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-21T13:43:36.855-04:00  INFO 2380 --- [sistema-reservas] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-08-21T13:43:36.871-04:00  INFO 2380 --- [sistema-reservas] [  restartedMain] c.reservas.SistemaReservasApplication    : Started SistemaReservasApplication in 5.811 seconds (process running for 6.183)

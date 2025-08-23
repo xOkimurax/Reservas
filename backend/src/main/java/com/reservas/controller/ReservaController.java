@@ -85,13 +85,4 @@ public class ReservaController {
         }
     }
 
-    @GetMapping("/{id}/whatsapp")
-    public ResponseEntity<Map<String, String>> generarLinkWhatsApp(@PathVariable Long id) {
-        try {
-            String link = reservaService.generarLinkWhatsApp(id);
-            return ResponseEntity.ok(Map.of("whatsappLink", link));
-        } catch (Exception e) {
-            return ResponseEntity.notFound().build();
-        }
-    }
 }

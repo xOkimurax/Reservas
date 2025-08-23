@@ -2,6 +2,10 @@
 
 Sistema completo de gestión de reservas desarrollado con tecnologías modernas para entornos empresariales.
 
+## 🏢 Enfoque Empresarial
+
+Este sistema está especialmente diseñado para empresas de servicios que requieren gestión eficiente de citas y reservas, tales como clínicas médicas, centros de belleza, spa, estudios de tatuajes, consultorios profesionales, talleres especializados y centros de capacitación. La arquitectura modular permite adaptarse fácilmente a diferentes tipos de negocios que manejan servicios por citas, ofreciendo control granular de usuarios con roles diferenciados (administradores, supervisores y empleados), gestión de servicios con precios en moneda local, y un sistema de notificaciones automatizado que mejora la comunicación con los clientes y optimiza la operación diaria del negocio.
+
 ## 🚀 Tecnologías Utilizadas
 
 ### **Backend - Spring Boot**
@@ -62,7 +66,6 @@ Sistema completo de gestión de reservas desarrollado con tecnologías modernas 
 - Creación de reservas con validación completa
 - Listado y filtrado por estado (Pendiente, Confirmada, Rechazada)
 - Confirmación y rechazo por parte del administrador
-- Integración con WhatsApp para notificaciones automáticas
 
 ### **Administración de Servicios**
 - CRUD completo de servicios (Crear, Leer, Actualizar, Eliminar)
@@ -198,7 +201,6 @@ El sistema incluye un usuario administrador por defecto:
 - `POST /api/reservas` - Crear nueva reserva
 - `PUT /api/reservas/{id}/confirmar` - Confirmar reserva
 - `PUT /api/reservas/{id}/rechazar` - Rechazar reserva
-- `GET /api/reservas/{id}/whatsapp` - Generar enlace WhatsApp
 
 ### **Servicios**
 - `GET /api/servicios` - Listar servicios
@@ -212,19 +214,6 @@ El sistema incluye un usuario administrador por defecto:
 - `PUT /api/usuarios/{id}` - Actualizar usuario
 - `DELETE /api/usuarios/{id}` - Desactivar usuario
 
-## 📱 Integración WhatsApp
-
-El sistema genera automáticamente enlaces de WhatsApp con mensajes personalizados:
-
-```
-https://wa.me/[TELEFONO]?text=[MENSAJE_CODIFICADO]
-```
-
-Los mensajes incluyen:
-- Nombre del cliente
-- Servicio reservado
-- Fecha y hora
-- Estado de la reserva
 
 ## 🗂 Estructura del Proyecto
 

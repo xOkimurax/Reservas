@@ -78,15 +78,6 @@ const AdminDashboard = () => {
     }
   };
 
-  const handleWhatsApp = async (id) => {
-    try {
-      const response = await reservasApi.generarLinkWhatsApp(id);
-      window.open(response.data.whatsappLink, '_blank');
-    } catch (error) {
-      console.error('Error al generar link de WhatsApp:', error);
-      toast.error('Error al generar el enlace de WhatsApp');
-    }
-  };
 
   const getEstadoColor = (estado) => {
     switch (estado) {
@@ -336,15 +327,6 @@ const AdminDashboard = () => {
                             </>
                           )}
                           
-                          {(reserva.estado === 'Confirmada' || reserva.estado === 'Rechazada') && (
-                            <button
-                              onClick={() => handleWhatsApp(reserva.idReserva)}
-                              className="text-green-600 hover:text-green-800"
-                              title="Enviar WhatsApp"
-                            >
-                              📱
-                            </button>
-                          )}
                         </div>
                       </td>
                     </tr>

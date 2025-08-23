@@ -76,16 +76,6 @@ const ReservaDetail = () => {
     }
   };
 
-  const handleWhatsApp = async () => {
-    try {
-      const response = await reservasApi.generarLinkWhatsApp(id);
-      window.open(response.data.whatsappLink, '_blank');
-      toast.success('Enlace de WhatsApp generado');
-    } catch (error) {
-      console.error('Error al generar link de WhatsApp:', error);
-      toast.error('Error al generar el enlace de WhatsApp');
-    }
-  };
 
   const getEstadoColor = (estado) => {
     switch (estado) {
@@ -276,15 +266,6 @@ const ReservaDetail = () => {
                   </>
                 )}
                 
-                {(reserva.estado === 'Confirmada' || reserva.estado === 'Rechazada') && (
-                  <button
-                    onClick={handleWhatsApp}
-                    className="w-full bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors duration-200 flex items-center justify-center"
-                  >
-                    <span className="mr-2">📱</span>
-                    Enviar por WhatsApp
-                  </button>
-                )}
                 
                 <div className="pt-4 border-t">
                   <p className="text-xs text-gray-500 text-center">

@@ -12,9 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
-import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
@@ -120,26 +117,6 @@ public class ReservaService {
         return actualizarEstadoReservaConGestor(id, "Rechazada", emailGestor);
     }
 
-    public String generarLinkWhatsApp(Long idReserva) {
-        Reserva reserva = reservaRepository.findById(idReserva)
-                .orElseThrow(() -> new RuntimeException("Reserva no encontrada"));
-
-        String mensaje = String.format(
-            "Hola %s! Tu reserva de %s el %s a las %s fue %s ✅",
-            reserva.getUsuario().getNombre(),
-            reserva.getServicio().getNombreServicio(),
-            reserva.getFecha(),
-            reserva.getHora(),
-            reserva.getEstado().toUpperCase()
-        );
-
-        try {
-            String mensajeCodificado = URLEncoder.encode(mensaje, StandardCharsets.UTF_8.toString());
-            return "https://wa.me/" + reserva.getUsuario().getTelefono() + "?text=" + mensajeCodificado;
-        } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException("Error al generar link de WhatsApp", e);
-        }
-    }
 
     public Optional<ReservaResponse> obtenerReservaPorId(Long id) {
         return reservaRepository.findById(id)

@@ -27,7 +27,7 @@ const Home = () => {
           <div className="card text-center">
             <ClockIcon className="h-12 w-12 text-primary-600 mx-auto mb-4" />
             <h3 className="text-xl font-semibold mb-2">Confirmación Rápida</h3>
-            <p className="text-gray-600">Recibe confirmación inmediata por WhatsApp</p>
+            <p className="text-gray-600">Recibe confirmación inmediata por email</p>
           </div>
           
           <div className="card text-center">

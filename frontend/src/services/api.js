@@ -37,7 +37,6 @@ export const reservasApi = {
     const params = emailGestor ? { emailGestor } : {};
     return api.put(`/reservas/${id}/rechazar`, null, { params });
   },
-  generarLinkWhatsApp: (id) => api.get(`/reservas/${id}/whatsapp`),
 };
 
 export const usuariosApi = {
